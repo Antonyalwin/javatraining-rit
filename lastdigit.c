@@ -1,17 +1,16 @@
-public class LastDigitAddition {
-    public static int addLastDigits(int number1, int number2) {
-        int lastDigit1 = number1 % 10;
-        int lastDigit2 = number2 % 10;
-        int sum = lastDigit1 + lastDigit2;
-        return sum;
-    }
+#include <stdio.h>
 
-    public static void main(String[] args) {
-        int number1 = 12345;
-        int number2 = 67890;
-
-        int result = addLastDigits(number1, number2);
-
-        System.out.println("The sum of the last digits of " + number1 + " and " + number2 + " is " + result);
-    }
+int getSecondLastDigit(int number) {
+    int secondLastDigit = (number / 10) % 10;
+    return secondLastDigit;
 }
+
+int main() {
+    int number = 12345;
+    int secondLastDigit = getSecondLastDigit(number);
+    
+    printf("The second last digit of %d is %d\n", number, secondLastDigit);
+    
+    return 0;
+}
+
